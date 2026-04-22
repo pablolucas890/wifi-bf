@@ -11,8 +11,8 @@ _This script is purely for educational use. Any consequenses or damages arising 
 #### Starting
 Via python (direct)
 ```bash
-$ cd path/to/wifi-bg/src
-$ python3 __main__.py
+$ cd path/to/wifi-bf
+$ python3 src/__main__.py
 ```
 
 #### Commands
