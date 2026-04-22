@@ -1,5 +1,5 @@
 # wifi-bf
-> \[LINUX ONLY\] A (completely native) python3 wifi brute-force attack using the 100k most common passwords (2021)
+> \[LINUX ONLY\] A (completely native) python3 wifi brute-force attack using a password list
 
 <br />
 
@@ -39,7 +39,7 @@ The colors output by the program mean the following:
 - ![#5f00ff](https://via.placeholder.com/15/5f00ff/000000?text=+) `Testing (password)`
 
 #### Credits
-Wordlist: https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-100000.txt
+Wordlist: https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/xato-net-10-million-passwords-1000000.txt
 
 <br />
 
