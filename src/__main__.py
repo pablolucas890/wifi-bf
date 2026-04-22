@@ -6,6 +6,7 @@ import sys
 import time
 from ssid import start
 
+TEMP_PASSWORDS_FILE = "/tmp/wifi-bf-passwords.txt"
 
 def cls():
     """
@@ -105,7 +106,7 @@ def save_passwords_locally(passwords):
     This function saves a list of passwords to a file
     """
 
-    with open("passwords.txt", "w", encoding="utf-8") as file:
+    with open(TEMP_PASSWORDS_FILE, "w", encoding="utf-8") as file:
         for password in passwords:
             decoded_line = password.decode("utf-8")
             file.write(decoded_line)
@@ -116,7 +117,7 @@ def local_passwords_file_exists():
     This function checks if a local password file is found
     """
 
-    return os.path.exists("passwords.txt")
+    return os.path.exists(TEMP_PASSWORDS_FILE)
 
 
 def get_local_passwords():
@@ -124,7 +125,7 @@ def get_local_passwords():
     This function returns a local previously downloaded local passwords file
     """
 
-    with open("passwords.txt", "r", encoding="utf-8") as file:
+    with open(TEMP_PASSWORDS_FILE, "r", encoding="utf-8") as file:
         return file.readlines()
 
 
