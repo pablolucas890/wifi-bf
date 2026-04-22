@@ -180,6 +180,10 @@ def prompt_for_target_choice(max):
 
 def brute_force(selected_network, passwords, args):
     nmcli_command = f"nmcli connection delete '{selected_network}'"
+
+    if args.verbose is False:
+        nmcli_command += " > /dev/null 2>&1"
+
     for password in passwords:
         subprocess.run(nmcli_command, shell=True, check=False)
         # necessary due to NetworkManager restart after unsuccessful attempt at login
