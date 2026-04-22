@@ -1,0 +1,12 @@
+# v2.0.0 (2026-04-22)
+
+- build: v2.0.0
+- cleanup: define password list url into a global const file
+- raw: removing __pycache__ from git
+- raw: create authors file
+- cleanup: define password list into a global const file
+- cleanup: adding pylint config on project
+- docs: improve usage steps
+- refactor: adding verbose verification before delete connection
+- raw: fix wrong pass list
+- fix: delete all conection data before test
