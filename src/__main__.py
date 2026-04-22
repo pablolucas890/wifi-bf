@@ -7,6 +7,7 @@ import time
 from ssid import start
 
 TEMP_PASSWORDS_FILE = "/tmp/wifi-bf-passwords.txt"
+DEFAULT_PASSWORDS_URL = "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-100000.txt"
 
 def cls():
     """
@@ -304,7 +305,7 @@ def main():
         file.close()
     else:
         # fallback to the default list as the user didn't supply a password list
-        default_url = "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/xato-net-10-million-passwords-1000000.txt"
+        default_url = DEFAULT_PASSWORDS_URL
         passwords = fetch_password_from_url(default_url)
         if passwords:
             save_passwords_locally(passwords=passwords)
